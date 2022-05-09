@@ -1020,6 +1020,12 @@ body {
                    
                   }
                   a{
+                    font-family: "Raleway";
+                    font-size: 24px;
+                    text-decoration: none;
+                    color: #000;
+                    letter-spacing: 4.1px;
+                    transition:  .3s linear;
                     display: block;
                     text-decoration: none;
                     display: flex;
@@ -1035,11 +1041,14 @@ body {
                       font-family: "Raleway";
                       color: #000;
                     }
+                   
+                  }
+                  a:hover {
+                    
                   }
                 }
   
               }
-  
             }
             .contact-bottom{
               margin: 1% 0;
@@ -1053,16 +1062,22 @@ body {
                 .sns2{
                   margin-right: 64px;
                   a{
+                    position: absolute;
                     font-family: "Raleway";
                     font-size: 24px;
                     text-decoration: none;
                     color: #000;
                     letter-spacing: 4.1px;
+                    width: 0;
+                    transition: .3s linear;
     
+                  }
+                  a:hover{
+                    width: 86px;
+                    border-bottom: 1px solid #000;
                   }
                 }
               }
-
             }
           }
 
@@ -1087,11 +1102,60 @@ body {
   
               }
             }
-  
           }
-
         }
-       
+        #popup{
+          display: none;
+          position: fixed;
+          z-index: 999;
+          bottom: 0;
+          width: 100%;
+         
+          .pop-wrap{
+            width: 1920px;
+            background: #fff;
+            min-height: 100vh;
+            margin: 0 auto;
+            font-family: 'EliceDigitalBaeum';
+            .pop-text{
+              position: absolute;
+              top: 17%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              text-align: center;
+              p{
+                
+                font-size: 50px;
+                span{
+
+                }
+              }
+            }
+            .pop-img{
+              width: 500px;
+              height: 500px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              background: url(../image/QR.png) no-repeat center center/100%;
+
+            }
+            .close{
+              width: 500px;
+              height: 80px;
+              position: absolute;
+              top: 85%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              border: none;
+              background: #ddd;
+              font-size: 33px;
+              border-radius: 20px;
+
+            }
+          }
+        }
       }
     }/* container-large */
   }/* #wrap */

@@ -824,6 +824,15 @@ body #wrap .container-large .section1 .section1-box .content-box2 .weblogo img.g
           filter: grayscale(0);
 }
 
+body #wrap .container-large .section1 .section1-box .content-box2 .kogoslogo {
+  position: absolute;
+  top: 50%;
+  left: 56%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 295px;
+}
+
 body #wrap .container-large .section1 .section1-box .blue {
   background: #0032a5;
 }

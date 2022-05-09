@@ -619,25 +619,9 @@ body {
               background: url(../image/ggggaas.png) no-repeat center top/cover;
               overflow: hidden;
             }
-          }
-          .content-box2 {
-            position: absolute;
-            top: 62%;
-            left: 80%;
-            width: 350px;
-            height: 350px;
-            box-shadow: 0 32px 40px -20px rgba(0,0,0,.25);
-            background: #979797;
-            z-index: 3;
-            overflow: hidden;
-            background-size: cover;
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-            overflow: hidden;
-            .weblogo{
-              
-              img{
-              width: 270px;
+            .guess-page{
+              width: 100%;
+              height: 100%;
               position: absolute;
               left: 50%;
               top: 50%;
@@ -648,7 +632,44 @@ body {
               -ms-transform: translate(-50%, -50%) translateZ(50px);
               -o-transform: translate(-50%, -50%) translateZ(50px);
               transform: translate(-50%, -50%) translateZ(50px);
+              background: url(../image/1.jpg) no-repeat center top/cover;
+            }
+            .guess-logo{
+              width: 80px;
+              height: 70px;
+              position: absolute;
+              left: 4%;
+              top: 6%;
+              background: url(../image/h1_logo.png) no-repeat center center/cover;
+            }
+          }
+          .content-box2 {
+            position: absolute;
+            top: 62%;
+            left: 80%;
+            width: 350px;
+            height: 350px;
+            box-shadow: 0 32px 40px -20px rgba(0,0,0,.25);
+            background: #ffffff;
+            z-index: 3;
+            overflow: hidden;
+            background-size: cover;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            overflow: hidden;
+            .weblogo{
+              
+              img.guess-hover{
+              width: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              filter: grayscale(97%);
+              transition: .3s;
 
+              }
+              img.guess-hover:hover{
+                filter: grayscale(0);
               }
               
             }
@@ -662,7 +683,7 @@ body {
               height: 141px;
               overflow: hidden;
               position: absolute;
-              top: 97%;
+              top: 100%;
             .content-text{
               position: absolute;
               top: 0;
@@ -675,14 +696,18 @@ body {
                 top: 53%;
                 left: 0;
                 span{
-                  font-family: 'yg-jalnan';
+                  font-family:"Cinzel", serif;
                   font-size: 28px;
-                  font-weight: 500;
+                  font-weight: 700;
                 }
                 span.Cinzel{
                   font-family:"Cinzel", serif;
                   font-size: 35px;
                   font-weight: 700;
+                }
+                span.ko-tx{
+                  font-family: 'yg-jalnan';
+
                 }
               }
               .cn{
@@ -1005,10 +1030,7 @@ body {
                     }
                   }
                 }
-                p.bb{
-                  /* border-bottom: 2px solid #000; */
-                  
-                }  
+  
               }
   
             }

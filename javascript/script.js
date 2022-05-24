@@ -61,7 +61,7 @@
        // console.log(sct);
         const offTop1=$('#scroll1').offset();
        console.log(offTop1);
-       if(sct >offTop1.top-150){
+       if(sct >offTop1.top-200){
             $('.web-t>span').addClass('web-small');
             $('.wicon>ul').addClass('textTop');
             $('.wline').addClass('w-line');

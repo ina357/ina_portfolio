@@ -5,6 +5,8 @@
       this.scrolls();
       this.header();
       this.centerLine();
+      this.centerLine1();
+      this.centerLine2();
     },
     scrolls: function(){
       $(window).scroll(function(){
@@ -67,11 +69,9 @@
             $('.wline').addClass('w-line');
             $('.wline1').addClass('w-line1');
             $('.web-s-t>span').addClass('web-s-t-a');
-            $('.A_main').addClass('about-ani');
-            $('.web2-effect').addClass('web2-ani');
-            $('.web3-effect').addClass('web3-ani');
-            $('.line').addClass('line-ani');
-            $('.line1').addClass('line1-ani');
+           
+           
+            
             $('.content-name').addClass('cn');
             $('.nline').addClass('cn-line');
             $('.content-btn').addClass('cn-btn');
@@ -98,6 +98,54 @@
         maxGlare: .3
     })
     });
+    },
+    centerLine1: function(){
+      $(window).scroll(function(){
+        let sct=$(window).scrollTop();
+       // console.log(sct);
+        const offTop3=$('#scroll3').offset();
+       console.log(offTop3);
+       if(sct >offTop3.top-200){
+        $('.web2-effect').addClass('web2-ani');
+        $('.web3-effect').addClass('web3-ani');
+        $('.line').addClass('line-ani');
+        $('.line1').addClass('line1-ani');
+            
+            
+        }else{
+        $('.web2-effect').removeClass('web2-ani');
+        $('.web3-effect').removeClass('web3-ani');
+        $('.line').removeClass('line-ani');
+        $('.line1').removeClass('line1-ani');
+        
+       
+       }
+       
+       $('.js-tilt').tilt({
+        glare: true,
+        maxGlare: .3
+    })
+    });
+
+    },
+    centerLine2: function(){
+      $(window).scroll(function(){
+        let sct=$(window).scrollTop();
+       // console.log(sct);
+        const offTop2=$('#scroll2').offset();
+       console.log(offTop2);
+       if(sct >offTop2.top-300){
+        $('.A_main').addClass('about-ani');
+        $('.A-photo').addClass('A-photo-ani');
+        $('.A-line').addClass('A-line-ani');
+        }else{
+          $('.A_main').removeClass('about-ani');
+          $('.A-photo').removeClass('A-photo-ani');
+          $('.A-line').removeClass('A-line-ani');
+       
+       }
+    });
+
     },
   };
   wrap.init();

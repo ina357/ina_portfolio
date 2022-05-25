@@ -280,7 +280,7 @@ body {
     }/* container */
     .container2{
       max-width: 1920px;
-      height: 3500px;
+      height: 3000px;
       background: rgb(255, 255, 255);
       margin: 0 auto;
       .web-center1{
@@ -292,6 +292,7 @@ body {
         position: relative;
         overflow: hidden;
         .web-text-wrap{
+          position: absolute;
           width: 100%;
           .web-text{
             .web-t{
@@ -304,7 +305,7 @@ body {
                 animation: showTopText 0.5s;
                 animation-fill-mode: forwards;
                 bottom: 0;
-                font-size: 111px;
+                font-size: 147px;
                 font-weight: 500;
                 color: rgb(0, 0, 0);
               }
@@ -444,9 +445,10 @@ body {
             display:block;
             animation: showTopText 0.5s;
             animation-fill-mode: forwards;
+            transform: translate(0, 100%);
             position: absolute;
-            top: 8%;
-            font-size: 111px;
+            top: 1%;
+            font-size: 147px;
             font-weight: 500;
             color: rgb(0, 0, 0);
           }
@@ -458,35 +460,63 @@ body {
           overflow: hidden;
           .A-wrap{
             display: flex;
+            justify-content: center;
             width: 100%;
             .A-photo{
-              background: url(../image/about_1.jpg) no-repeat center center/100%;
+              display: none;
               width: 50%;
-              height: 700px;
+              
+            }
+            .A-photo-ani{
+              background: url(../image/about_1.jpg) no-repeat center center/100%;
+              width: 34%;
+              height: 500px;
+              display:block;
+              animation: showTopText 0.7s;
+              animation-fill-mode: forwards;
+              transform: translate(0, 100%);
+              animation-delay: 0.3s;
+              
+
             }
             .A-tx{
-              width: 50%;
-              height: 100%;
-            }
-            .line{
-              padding: 13px;
-              p{
-                font-size: 28px;
-                font-weight: 600;
-                padding-bottom: 50px;
-                
-
+                width: 40%;
+                height: 500px;
+                overflow: hidden;
+                color: rgb(160, 160, 160);
+             
+              .A-line{
+                display: none;
               }
-              .tx{
-                
-                span.tx1{
-                  font-weight: 400;
-                  font-size: 20px;
-
+              .A-line-ani{
+                /* text-align: center; */
+                padding:20px 10px;
+                display:block;
+                animation: showTopText 0.7s;
+                animation-fill-mode: forwards;
+                transform: translate(0, 100%);
+                animation-delay: 0.5s;
+                background: rgb(255, 255, 255);
+                p{
+                  font-size: 28px;
+                  font-weight: 600;
+                  padding-bottom: 33px;
                 }
+                .tx{
+                  color: #232323;
+                  
+                  span.tx1{
+                    font-weight: 400;
+                    font-size: 18px;
+                    font-family: 'EliceDigitalBaeum';
+  
+                  }
+                }
+               
               }
-
             }
+           
+           
     
           }
         }
@@ -494,31 +524,30 @@ body {
       }
       .web2-center{
         width: 100%;
-        bottom: -470%;
         left: 50%;
         transform: translateX(-50%);
         height: 900px;
         background: rgb(255, 255, 255);
         font-family: "Cinzel", serif;
         text-align: center;
-        position: absolute;
+        position: relative;
         overflow: hidden;
         z-index: 3;
         .web2-wrap{
-          margin: 150px 0;
+          
           .web2-text{
+            margin: 200px 0 0;
             width: 100%;
             .web2-effect{
               display: none;
             }
             .web2-ani{
                 display: block;
-                font-size: 150px;
+                font-size: 130px;
                 font-weight: 500;
-                text-shadow: 4px 4px 4px #eeeeee;
+                text-shadow: 1px 1px 5px #eeeeee6c;
                 color: #232323;
                 animation: fade-in 1.5s;
-                animation-delay: 0.75s;
                 animation-fill-mode: forwards;
             }
           }
@@ -526,7 +555,7 @@ body {
         .web2-text-line{
           width: 100%;
           position: absolute;
-          top: 50%;
+          top: 52%;
           transform: translateY(-50%);
           background: rgb(255, 255, 255);
           overflow: hidden;
@@ -534,6 +563,7 @@ body {
             display: none;
           }
           .line-ani{
+            
             display: block;
             border-top: 5px solid #232323;
             position: absolute;
@@ -541,10 +571,11 @@ body {
             top: 50%;
             left: 0;
             z-index: 2;
-            animation: showrightText 4.5s;
-            animation-delay: 0.75s;
+            animation: showrightText 1.5s;
             animation-fill-mode: forwards;
-            transform: translate(-100%, 0);
+           /*  animation-delay: 0.75s; */
+            animation-fill-mode: forwards;
+            transform: translate(-100%, 0); 
             overflow: hidden;
           }
           .line1{
@@ -558,9 +589,9 @@ body {
             top: 50%;
             right: 0;
             z-index: 2;
-            animation: showleftText 4.5s;
-            animation-delay: 0.75s;
+            animation: showleftText 1.5s;
             animation-fill-mode: forwards;
+            /* animation-delay: 0.75s; */
             transform: translate(100%, 0);
           
           }
@@ -576,7 +607,6 @@ body {
               display: inline-block;
               color: #232323;
               animation: fade-in 1.5s;
-              animation-delay: 0.75s;
               animation-fill-mode: forwards;
           }
         }
@@ -603,7 +633,8 @@ body {
             width: 470px;
             height: 500px;
             background:#ddd;
-            box-shadow: 0 32px 40px -20px rgba(0,0,0,.25);
+            box-shadow: 0 8px 13px -5px rgba(0,0,0,.25);
+            
             z-index: 2;
             overflow: hidden;
             background-size: cover;
@@ -617,7 +648,7 @@ body {
                 left: 50%;
                 top: 50%;
                 transform-style: preserve-3d;
-                box-shadow: 0px 32px 40px -20px rgba(0,0,0,.25);
+                box-shadow: 0 8px 13px -5px rgba(0,0,0,.25);
                 -webkit-transform: translate(-50%, -50%) translateZ(50px);
                 -moz-transform: translate(-50%, -50%) translateZ(50px);
                 -ms-transform: translate(-50%, -50%) translateZ(50px);
@@ -635,7 +666,7 @@ body {
                 left: 50%;
                 top: 50%;
                 transform-style: preserve-3d;
-                box-shadow: 0px 32px 40px -20px rgba(0,0,0,.25);
+                box-shadow: 0 8px 13px -5px rgba(0,0,0,.25);
                 -webkit-transform: translate(-50%, -50%) translateZ(50px);
                 -moz-transform: translate(-50%, -50%) translateZ(50px);
                 -ms-transform: translate(-50%, -50%) translateZ(50px);
@@ -659,7 +690,7 @@ body {
             left: 80%;
             width: 350px;
             height: 350px;
-            box-shadow: 0 32px 40px -20px rgba(0,0,0,.25);
+            box-shadow: 0 8px 13px -5px rgba(0,0,0,.25);
             background: #ffffff;
             z-index: 3;
             overflow: hidden;
@@ -693,7 +724,7 @@ body {
             
           }
           .blue{
-            background:#0032a5;
+            background:#ffffff;
           }
           .content-textwrap{
               width: 430px;
@@ -800,9 +831,9 @@ body {
           z-index: 33;
           .content-box1{
             width: 710px;
-            height: 356px;
+            height: 430px;
             background:#ddd;
-            box-shadow: 0 32px 40px -20px rgba(0,0,0,.25);
+            box-shadow: 0 8px 13px -5px rgba(0,0,0,.25);
             a.jenesis-link{
               .webjene{
                 width: 100%;
@@ -812,44 +843,39 @@ body {
                 left: 50%;
                 top: 50%;
                 transform-style: preserve-3d;
-                box-shadow: 0px 32px 40px -20px rgba(0,0,0,.25);
+                box-shadow: 0 8px 13px -5px rgba(0,0,0,.25);
                 -webkit-transform: translate(-50%, -50%) translateZ(50px);
                 -moz-transform: translate(-50%, -50%) translateZ(50px);
                 -ms-transform: translate(-50%, -50%) translateZ(50px);
                 -o-transform: translate(-50%, -50%) translateZ(50px);
                 transform: translate(-50%, -50%) translateZ(50px);
-                background: url(../image/web_jene.png) no-repeat center top/cover;
+                background: url(../image/jenesisback.webp) no-repeat 72% 0/200%;
+                img{
+                  width: 157px;
+                  position: absolute;
+                  top: 23%;
+                  left: 41%;
+                  transform-style: preserve-3d;
+                  box-shadow: 0 8px 13px -5px rgba(0,0,0,.25);
+                  
+                  
+                }
               }
 
-            }
-            .icecream-box{
-              width: 100%;
-              height: 100%;
-              background-size: cover;
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              transform-style: preserve-3d;
-              box-shadow: 0px 32px 40px -20px rgba(0,0,0,.25);
-              -webkit-transform: translate(-50%, -50%) translateZ(50px);
-              -moz-transform: translate(-50%, -50%) translateZ(50px);
-              -ms-transform: translate(-50%, -50%) translateZ(50px);
-              -o-transform: translate(-50%, -50%) translateZ(50px);
-              transform: translate(-50%, -50%) translateZ(50px);
-              background: url(../image/icepng.png) no-repeat center top/cover;
             }
           }
           
           .content-box2{
             position: absolute;
-            top: 63%;
-            left: 88%;
+            top: 64%;
+            left: 82%;
             width: 475px;
             height: 400px;
-            box-shadow: 0 32px 40px -20px rgba(0,0,0,.25);
+            box-shadow: 0 8px 13px -5px rgba(0,0,0,.25);
             background: #eee;
             z-index: 44;
             overflow: hidden;
+            z-index: 3;
             
           }
           .black{
@@ -865,7 +891,7 @@ body {
               left: 50%;
               top: 50%;
               transform-style: preserve-3d;
-              box-shadow: 0px 32px 40px -20px rgba(0,0,0,.25);
+              box-shadow: 0 8px 13px -5px rgba(0,0,0,.25);
               -webkit-transform: translate(-50%, -50%) translateZ(50px);
               -moz-transform: translate(-50%, -50%) translateZ(50px);
               -ms-transform: translate(-50%, -50%) translateZ(50px);
@@ -873,7 +899,7 @@ body {
               transform: translate(-50%, -50%) translateZ(50px);
               
               img{
-                width: 280px;
+                width: 333px;
               }
               img.logo-jene{
                 position: absolute;
@@ -881,37 +907,18 @@ body {
                 right: 26px;
                 top: 45%;
                 width: 107px;
+                
               }
 
             }
           }
-          .pink{
-            background: #ff7c98;
-            .pink-logo{
-              height: auto;
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              transform-style: preserve-3d;
-              box-shadow: 0px 32px 40px -20px rgba(0,0,0,.25);
-              -webkit-transform: translate(-50%, -50%) translateZ(50px);
-              -moz-transform: translate(-50%, -50%) translateZ(50px);
-              -ms-transform: translate(-50%, -50%) translateZ(50px);
-              -o-transform: translate(-50%, -50%) translateZ(50px);
-              transform: translate(-50%, -50%) translateZ(50px);
-              
-              img{
-                width: 160px;
-              }
-            }
-          }
           .content-textwrap{
               z-index: 1;
-              width: 382px;
+              width: 348px;
               height: 141px;
               overflow: hidden;
               position: absolute;
-              right: -52.6%;
+              right: -49%;
               top: 21%;
             .content-text{
               z-index: 1;

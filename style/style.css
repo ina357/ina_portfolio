@@ -351,7 +351,7 @@ body #wrap .container .page .mainBottom .container-inner .image-wrapper .image-c
 
 body #wrap .container2 {
   max-width: 1920px;
-  height: 3500px;
+  height: 3000px;
   background: white;
   margin: 0 auto;
 }
@@ -368,6 +368,7 @@ body #wrap .container2 .web-center1 {
 }
 
 body #wrap .container2 .web-center1 .web-text-wrap {
+  position: absolute;
   width: 100%;
 }
 
@@ -383,7 +384,7 @@ body #wrap .container2 .web-center1 .web-text-wrap .web-text .web-t span.web-sma
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   bottom: 0;
-  font-size: 111px;
+  font-size: 147px;
   font-weight: 500;
   color: black;
 }
@@ -557,9 +558,11 @@ body #wrap .container2 .AboutBox .A_text .about-ani {
           animation: showTopText 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
   position: absolute;
-  top: 8%;
-  font-size: 111px;
+  top: 1%;
+  font-size: 147px;
   font-weight: 500;
   color: black;
 }
@@ -575,38 +578,76 @@ body #wrap .container2 .AboutBox .About .A-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
 body #wrap .container2 .AboutBox .About .A-wrap .A-photo {
-  background: url(../image/about_1.jpg) no-repeat center center/100%;
+  display: none;
   width: 50%;
-  height: 700px;
+}
+
+body #wrap .container2 .AboutBox .About .A-wrap .A-photo-ani {
+  background: url(../image/about_1.jpg) no-repeat center center/100%;
+  width: 34%;
+  height: 500px;
+  display: block;
+  -webkit-animation: showTopText 0.7s;
+          animation: showTopText 0.7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 body #wrap .container2 .AboutBox .About .A-wrap .A-tx {
-  width: 50%;
-  height: 100%;
+  width: 40%;
+  height: 500px;
+  overflow: hidden;
+  color: #a0a0a0;
 }
 
-body #wrap .container2 .AboutBox .About .A-wrap .line {
-  padding: 13px;
+body #wrap .container2 .AboutBox .About .A-wrap .A-tx .A-line {
+  display: none;
 }
 
-body #wrap .container2 .AboutBox .About .A-wrap .line p {
+body #wrap .container2 .AboutBox .About .A-wrap .A-tx .A-line-ani {
+  /* text-align: center; */
+  padding: 20px 10px;
+  display: block;
+  -webkit-animation: showTopText 0.7s;
+          animation: showTopText 0.7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  background: white;
+}
+
+body #wrap .container2 .AboutBox .About .A-wrap .A-tx .A-line-ani p {
   font-size: 28px;
   font-weight: 600;
-  padding-bottom: 50px;
+  padding-bottom: 33px;
 }
 
-body #wrap .container2 .AboutBox .About .A-wrap .line .tx span.tx1 {
+body #wrap .container2 .AboutBox .About .A-wrap .A-tx .A-line-ani .tx {
+  color: #232323;
+}
+
+body #wrap .container2 .AboutBox .About .A-wrap .A-tx .A-line-ani .tx span.tx1 {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
+  font-family: 'EliceDigitalBaeum';
 }
 
 body #wrap .container2 .web2-center {
   width: 100%;
-  bottom: -470%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -614,16 +655,13 @@ body #wrap .container2 .web2-center {
   background: white;
   font-family: "Cinzel", serif;
   text-align: center;
-  position: absolute;
+  position: relative;
   overflow: hidden;
   z-index: 3;
 }
 
-body #wrap .container2 .web2-center .web2-wrap {
-  margin: 150px 0;
-}
-
 body #wrap .container2 .web2-center .web2-wrap .web2-text {
+  margin: 200px 0 0;
   width: 100%;
 }
 
@@ -633,14 +671,12 @@ body #wrap .container2 .web2-center .web2-wrap .web2-text .web2-effect {
 
 body #wrap .container2 .web2-center .web2-wrap .web2-text .web2-ani {
   display: block;
-  font-size: 150px;
+  font-size: 130px;
   font-weight: 500;
-  text-shadow: 4px 4px 4px #eeeeee;
+  text-shadow: 1px 1px 5px #eeeeee6c;
   color: #232323;
   -webkit-animation: fade-in 1.5s;
           animation: fade-in 1.5s;
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -648,7 +684,7 @@ body #wrap .container2 .web2-center .web2-wrap .web2-text .web2-ani {
 body #wrap .container2 .web2-center .web2-text-line {
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 52%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: white;
@@ -667,12 +703,12 @@ body #wrap .container2 .web2-center .web2-text-line .line-ani {
   top: 50%;
   left: 0;
   z-index: 2;
-  -webkit-animation: showrightText 4.5s;
-          animation: showrightText 4.5s;
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
+  -webkit-animation: showrightText 1.5s;
+          animation: showrightText 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  /*  animation-delay: 0.75s; */
+  animation-fill-mode: forwards;
   -webkit-transform: translate(-100%, 0);
           transform: translate(-100%, 0);
   overflow: hidden;
@@ -690,12 +726,11 @@ body #wrap .container2 .web2-center .web2-text-line .line1-ani {
   top: 50%;
   right: 0;
   z-index: 2;
-  -webkit-animation: showleftText 4.5s;
-          animation: showleftText 4.5s;
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
+  -webkit-animation: showleftText 1.5s;
+          animation: showleftText 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  /* animation-delay: 0.75s; */
   -webkit-transform: translate(100%, 0);
           transform: translate(100%, 0);
 }
@@ -714,8 +749,6 @@ body #wrap .container2 .web2-center .web2-text-line .web3-ani {
   color: #232323;
   -webkit-animation: fade-in 1.5s;
           animation: fade-in 1.5s;
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -751,8 +784,8 @@ body #wrap .container-large .section1 .section1-box .content-box1 {
   width: 470px;
   height: 500px;
   background: #ddd;
-  -webkit-box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
   z-index: 2;
   overflow: hidden;
   background-size: cover;
@@ -768,8 +801,8 @@ body #wrap .container-large .section1 .section1-box .content-box1 a.kogas-link .
   top: 50%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
   -webkit-transform: translate(-50%, -50%) translateZ(50px);
   transform: translate(-50%, -50%) translateZ(50px);
   background: url(../image/ggggaas.png) no-repeat center top/cover;
@@ -784,8 +817,8 @@ body #wrap .container-large .section1 .section1-box .content-box1 a.guess-link .
   top: 50%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
   -webkit-transform: translate(-50%, -50%) translateZ(50px);
   transform: translate(-50%, -50%) translateZ(50px);
   background: url(../image/1.jpg) no-repeat center top/cover;
@@ -806,8 +839,8 @@ body #wrap .container-large .section1 .section1-box .content-box2 {
   left: 80%;
   width: 350px;
   height: 350px;
-  -webkit-box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
   background: #ffffff;
   z-index: 3;
   overflow: hidden;
@@ -843,7 +876,7 @@ body #wrap .container-large .section1 .section1-box .content-box2 .kogoslogo {
 }
 
 body #wrap .container-large .section1 .section1-box .blue {
-  background: #0032a5;
+  background: #ffffff;
 }
 
 body #wrap .container-large .section1 .section1-box .content-textwrap {
@@ -974,10 +1007,10 @@ body #wrap .container-large .section2 .section1-box {
 
 body #wrap .container-large .section2 .section1-box .content-box1 {
   width: 710px;
-  height: 356px;
+  height: 430px;
   background: #ddd;
-  -webkit-box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
 }
 
 body #wrap .container-large .section2 .section1-box .content-box1 a.jenesis-link .webjene {
@@ -989,40 +1022,36 @@ body #wrap .container-large .section2 .section1-box .content-box1 a.jenesis-link
   top: 50%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
   -webkit-transform: translate(-50%, -50%) translateZ(50px);
   transform: translate(-50%, -50%) translateZ(50px);
-  background: url(../image/web_jene.png) no-repeat center top/cover;
+  background: url(../image/jenesisback.webp) no-repeat 72% 0/200%;
 }
 
-body #wrap .container-large .section2 .section1-box .content-box1 .icecream-box {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+body #wrap .container-large .section2 .section1-box .content-box1 a.jenesis-link .webjene img {
+  width: 157px;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  top: 23%;
+  left: 41%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
-  -webkit-transform: translate(-50%, -50%) translateZ(50px);
-  transform: translate(-50%, -50%) translateZ(50px);
-  background: url(../image/icepng.png) no-repeat center top/cover;
+  -webkit-box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
 }
 
 body #wrap .container-large .section2 .section1-box .content-box2 {
   position: absolute;
-  top: 63%;
-  left: 88%;
+  top: 64%;
+  left: 82%;
   width: 475px;
   height: 400px;
-  -webkit-box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
   background: #eee;
   z-index: 44;
   overflow: hidden;
+  z-index: 3;
 }
 
 body #wrap .container-large .section2 .section1-box .black {
@@ -1040,14 +1069,14 @@ body #wrap .container-large .section2 .section1-box .black .phone {
   top: 50%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.25);
   -webkit-transform: translate(-50%, -50%) translateZ(50px);
   transform: translate(-50%, -50%) translateZ(50px);
 }
 
 body #wrap .container-large .section2 .section1-box .black .phone img {
-  width: 280px;
+  width: 333px;
 }
 
 body #wrap .container-large .section2 .section1-box .black .phone img.logo-jene {
@@ -1058,34 +1087,13 @@ body #wrap .container-large .section2 .section1-box .black .phone img.logo-jene 
   width: 107px;
 }
 
-body #wrap .container-large .section2 .section1-box .pink {
-  background: #ff7c98;
-}
-
-body #wrap .container-large .section2 .section1-box .pink .pink-logo {
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 32px 40px -20px rgba(0, 0, 0, 0.25);
-  -webkit-transform: translate(-50%, -50%) translateZ(50px);
-  transform: translate(-50%, -50%) translateZ(50px);
-}
-
-body #wrap .container-large .section2 .section1-box .pink .pink-logo img {
-  width: 160px;
-}
-
 body #wrap .container-large .section2 .section1-box .content-textwrap {
   z-index: 1;
-  width: 382px;
+  width: 348px;
   height: 141px;
   overflow: hidden;
   position: absolute;
-  right: -52.6%;
+  right: -49%;
   top: 21%;
 }
 
